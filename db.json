@@ -1,0 +1,38 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "T-Shirt",
+      "description": "Cotton T-Shirt",
+      "price": 19.99,
+      "category": "Tops",
+      "size": "M",
+      "color": "Red",
+      "brand": "BrandA",
+      "popularity": 5
+    },
+    {
+      "id": 2,
+      "name": "Jeans",
+      "description": "Blue Denim Jeans",
+      "price": 49.99,
+      "category": "Bottoms",
+      "size": "L",
+      "color": "Blue",
+      "brand": "BrandB",
+      "popularity": 4
+    }
+  ],
+  "categories": [
+    { "id": 1, "name": "Tops" },
+    { "id": 2, "name": "Bottoms" }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "user1",
+      "email": "user1@example.com",
+      "password": "password123"
+    }
+  ]
+}

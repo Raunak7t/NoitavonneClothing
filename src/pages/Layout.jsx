@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
-import { Loading } from "../components";
+import { Footer, Header, Loading, Container } from "../components";
 
 function Layout() {
   const [loader, setLoader] = useState(true);
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div
+      className="flex flex-col min-h-screen"
+      onClick={() => {
+        setLoader(false);
+      }}
+    >
       {loader ? (
         <Loading />
       ) : (
