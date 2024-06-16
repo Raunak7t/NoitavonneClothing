@@ -93,7 +93,7 @@ This project uses JSON Server to simulate a backend API. Follow these steps to s
 
 2. **Start JSON Server**
 
-   Navigate to the `backend` directory in your project and run:
+   Navigate to the root directory of your project and run:
 
    ```bash
    npx json-server db.json --port 5000
