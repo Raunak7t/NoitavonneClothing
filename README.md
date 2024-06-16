@@ -109,21 +109,13 @@ After completing the installation and backend setup, start the React application
 npm run dev
 ```
 
-The application will be accessible at `http://localhost:3000`.
+The application will be accessible at `http://localhost:5173/`.
 
 You can use the following credentials or you can register a new user:
 
-E-mail:
+E-mail: `user@1.com`
 
-```bash
- user@1.com
-```
-
-Password:
-
-```bash
-passme
-```
+Password: `passme`
 
 ## Testing
 
@@ -136,6 +128,8 @@ npm test
 This will execute the test cases using Jest and React Testing Library.
 
 ## Folder Structure (Overview)
+
+There are more nested folders and files included in the project. This is just an overview.
 
 ```
 NoitavonneClothing/
