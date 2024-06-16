@@ -20,13 +20,7 @@ This is a full-fleged clothing e-commerce site. It's development phase was very 
 
 ## Demo
 
-<img src="./public/0.png" alt="landing-page" width="350">
-<img src="./public/1.png" alt="home" width="350">
-<img src="./public/2.png" alt="search" width="350">
-<img src="./public/3.png" alt="filter" width="350">
-<img src="./public/4.png" alt="product" width="350">
-<img src="./public/5.png" alt="register" width="350">
-<img src="./public/6.png" alt="checkout" width="350">
+<img src="./public/0.png" alt="landing-page" width="350"> <img src="./public/1.png" alt="home" width="350"> <img src="./public/2.png" alt="search" width="350"> <img src="./public/3.png" alt="filter" width="350"> <img src="./public/4.png" alt="product" width="350"> <img src="./public/5.png" alt="register" width="350"> <img src="./public/6.png" alt="checkout" width="350">
 
 ## Features
 
