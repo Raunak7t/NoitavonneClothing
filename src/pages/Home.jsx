@@ -5,7 +5,7 @@ import {
   fetchProducts,
   resetProducts,
 } from "../features/products/productSlice";
-import { AllProducts, Filters, Select, Button, Loading } from "../components";
+import { AllProducts, Select, Button, Loading } from "../components";
 
 const colors = ["All", "Black", "White", "Blue", "Red", "Green"];
 const brands = ["All", "Nike", "Adidas", "Zara", "H&M", "Levi's"];

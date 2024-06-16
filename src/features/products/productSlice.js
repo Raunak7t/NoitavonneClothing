@@ -16,6 +16,16 @@ export const fetchProducts = createAsyncThunk(
   }
 );
 
+export const fetchProductById = createAsyncThunk(
+  "products/fetchProductById",
+  async (pid) => {
+    const response = await axios.get(
+      `http://localhost:5000/products/?id=${pid}`
+    );
+    return response.data;
+  }
+);
+
 const productSlice = createSlice({
   name: "products",
   initialState: {
@@ -23,6 +33,7 @@ const productSlice = createSlice({
     status: null,
     page: 1,
     hasNextPage: true,
+    productDetails: null,
   },
   reducers: {
     resetProducts(state) {
@@ -45,6 +56,17 @@ const productSlice = createSlice({
       })
       .addCase(fetchProducts.rejected, (state) => {
         state.status = "failed";
+      })
+      .addCase(fetchProductById.pending, (state) => {
+        state.status = "loading";
+      })
+      .addCase(fetchProductById.fulfilled, (state, action) => {
+        state.productDetails = action.payload[0];
+
+        state.status = "succeeded";
+      })
+      .addCase(fetchProductById.rejected, (state) => {
+        state.status = "failed";
       });
   },
 });
@@ -52,3 +74,5 @@ const productSlice = createSlice({
 export const { resetProducts } = productSlice.actions;
 
 export default productSlice.reducer;
+
+export const selectProductDetails = (state) => state.products.productDetails;

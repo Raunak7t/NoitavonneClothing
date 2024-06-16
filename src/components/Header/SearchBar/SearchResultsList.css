@@ -9,8 +9,6 @@
   max-height: 300px;
   overflow-y: auto;
   position: absolute;
-  top: 40px;
-  z-index: 1000;
   left: 50%;
   transform: translateX(-50%);
 }

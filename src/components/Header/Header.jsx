@@ -5,7 +5,6 @@ import { Link, NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { RiMenu4Fill } from "react-icons/ri";
 import { RxCross2 } from "react-icons/rx";
-import SearchInput from "./SearchInput";
 import UserLogout from "./UserLogout";
 
 import { SearchBar } from "./SearchBar/SearchBar";
@@ -52,10 +51,12 @@ function Header() {
             {navOpen ? <RxCross2 /> : <RiMenu4Fill />}
           </span>
         </div>
-        <SearchBar setResults={setResults} />
-        {results && results.length > 0 && (
-          <SearchResultsList results={results} />
-        )}
+        <div className="mx-auto w-80">
+          <SearchBar setResults={setResults} />
+          {results && results.length > 0 && (
+            <SearchResultsList results={results} />
+          )}
+        </div>
         <nav className={`sm:ml-auto sm:mt-4`}>
           {false ? (
             <UserLogout />
