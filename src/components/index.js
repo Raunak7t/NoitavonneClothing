@@ -7,6 +7,9 @@ import Input from "./Inputs/Input";
 import Select from "./Inputs/Select";
 import Button from "./Button";
 import Title from "./Title";
+import Filters from "./Filters";
+import ProductCard from "./Products/ProductCard";
+import AllProducts from "./Products/AllProducts";
 
 export {
   StyledText,
@@ -18,4 +21,7 @@ export {
   Select,
   Button,
   Title,
+  Filters,
+  ProductCard,
+  AllProducts,
 };

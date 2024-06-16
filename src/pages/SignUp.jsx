@@ -40,10 +40,7 @@ function SignUp() {
     <div className="pb-14">
       <Title>
         Sign up to{" "}
-        <StyledText className="text-5xl tracking-wide sm:text-3xl">
-          Explore
-        </StyledText>{" "}
-        more
+        <StyledText className="text-4xl sm:text-2xl">Explore</StyledText> more
       </Title>
       <div className=" flex flex-col items-center gap-6 justify-center mt-8">
         <div className=" p-px rounded-lg bg-gradient-to-br from-purple-400 via-slate-700 to-purple-400">

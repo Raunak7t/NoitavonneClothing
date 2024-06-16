@@ -19,7 +19,7 @@
       "description": "Stretch denim jeans",
       "price": 49.99,
       "category": "Jeans",
-      "size": "30",
+      "size": "L",
       "color": "Black",
       "brand": "Levi's",
       "popularity": 5
@@ -79,7 +79,7 @@
       "description": "Distressed denim jeans",
       "price": 59.99,
       "category": "Jeans",
-      "size": "32",
+      "size": "XXL",
       "color": "Blue",
       "brand": "Levi's",
       "popularity": 5
@@ -139,7 +139,7 @@
       "description": "Bootcut denim jeans",
       "price": 69.99,
       "category": "Jeans",
-      "size": "31",
+      "size": "XL",
       "color": "Blue",
       "brand": "Levi's",
       "popularity": 4

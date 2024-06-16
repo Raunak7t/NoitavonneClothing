@@ -1,11 +1,19 @@
-import React from "react";
-import { Select } from "../components";
+import React, { useState } from "react";
+import { AllProducts, Filters, Select, StyledText, Title } from "../components";
 
 function Home() {
+  const [filterBox, setFilterBox] = useState(false);
+
   return (
-    <div>
-      <div className="top-bar flex justify-between items-center gap-4 flex-wrap-reverse">
-        <button className="bg-slate-800 py-1 px-4 rounded-md text-lg">
+    <div className="relative">
+      {filterBox && <Filters />}
+      <div className="top-bar flex justify-between items-center gap-4 flex-wrap-reverse pt-2">
+        <button
+          className="bg-slate-800 py-1 px-4 rounded-md text-lg"
+          onClick={() => {
+            setFilterBox((prev) => !prev);
+          }}
+        >
           Filters
         </button>
         <div className="flex gap-3 items-center">
@@ -21,7 +29,7 @@ function Home() {
           />
         </div>
       </div>
-      <div className="products"></div>
+      <AllProducts />
     </div>
   );
 }
