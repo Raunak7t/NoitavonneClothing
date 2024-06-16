@@ -17,7 +17,7 @@ const ProductCard = ({ product }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(`product-details/${id}`);
+    navigate(`/app/product-details/${id}`);
   };
 
   return (
@@ -26,7 +26,7 @@ const ProductCard = ({ product }) => {
       onClick={handleClick}
     >
       <img
-        className="w-full h-40 object-cover bg-slate-600"
+        className="w-full h-40 object-cover bg-slate-800"
         src={image}
         alt={name}
       />

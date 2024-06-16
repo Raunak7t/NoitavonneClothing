@@ -29,7 +29,9 @@ const router = createBrowserRouter(
         <Route path="product-details" element={<ProductDetails />}>
           <Route path=":pid" element={<ProductDetails />} />
         </Route>
-        <Route path="checkout" element={<Checkout />} />
+        <Route path="checkout" element={<Checkout />}>
+          <Route path=":pid" element={<Checkout />} />
+        </Route>
         <Route path="login" element={<LogIn />} />
         <Route path="signup" element={<SignUp />} />
       </Route>
@@ -38,9 +40,9 @@ const router = createBrowserRouter(
 );
 
 ReactDOM.createRoot(document.getElementById("root")).render(
+  // <React.StrictMode>
   <Provider store={store}>
     <RouterProvider router={router} />
   </Provider>
-  //     <React.StrictMode>
   // </React.StrictMode>
 );
