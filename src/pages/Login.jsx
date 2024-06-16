@@ -3,8 +3,8 @@ import { Button, Input, StyledText, Title } from "../components";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
-// import { guestLogin, login } from "../features/loginFeature";
 import { toast } from "react-toastify";
+import { loginUser } from "../features/auth/authSlice";
 
 function LogIn() {
   const { register, handleSubmit } = useForm();
@@ -15,26 +15,20 @@ function LogIn() {
   const [btnLoad, setBtnLoad] = useState(false);
 
   const submit = async (data) => {
-    //   try {
-    //     setBtnLoad(true);
-    //     const userData = await authService.logIn(data);
-    //     if (userData) {
-    //       const uData = await authService.getCurrentUser();
-    //       if (uData) {
-    //         dispatch(login(uData));
-    //         if (data?.guest == true) dispatch(guestLogin());
-    //         navigate("/app");
-    //       }
-    //     }
-    //     toast.success("Logged in!", {
-    //       position: "top-center",
-    //     });
-    //   } catch (error) {
-    //     toast.error(error.message, {
-    //       position: "top-center",
-    //     });
-    //   }
-    //   setBtnLoad(false);
+    setBtnLoad(true);
+    try {
+      const resultAction = await dispatch(loginUser(data));
+      if (loginUser.fulfilled.match(resultAction)) {
+        toast.success("Login successful!");
+        navigate("/app");
+      } else {
+        toast.error(resultAction.payload || "Login failed");
+      }
+    } catch (error) {
+      toast.error("An error occurred. Please try again.");
+    } finally {
+      setBtnLoad(false);
+    }
   };
 
   return (

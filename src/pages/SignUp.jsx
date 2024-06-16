@@ -3,8 +3,8 @@ import { Button, Input, StyledText, Title } from "../components";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
-// import { login } from "../features/loginFeature";
 import { toast } from "react-toastify";
+import { registerUser } from "../features/auth/authSlice";
 
 function SignUp() {
   const { register, handleSubmit } = useForm();
@@ -15,25 +15,20 @@ function SignUp() {
   const [btnLoad, setBtnLoad] = useState(false);
 
   const submit = async (data) => {
-    //   try {
-    //     setBtnLoad(true);
-    //     const userData = await authService.signUp(data);
-    //     if (userData) {
-    //       const uData = await authService.getCurrentUser();
-    //       if (uData) {
-    //         dispatch(login(uData));
-    //         navigate("/app");
-    //       }
-    //     }
-    //     toast.success("Signed up!", {
-    //       position: "top-center",
-    //     });
-    //   } catch (error) {
-    //     toast.error(error.message, {
-    //       position: "top-center",
-    //     });
-    //   }
-    //   setBtnLoad(false);
+    setBtnLoad(true);
+    try {
+      const resultAction = await dispatch(registerUser(data));
+      if (registerUser.fulfilled.match(resultAction)) {
+        toast.success("Registration successful!");
+        navigate("/app");
+      } else {
+        toast.error(resultAction.payload || "Registration failed");
+      }
+    } catch (error) {
+      toast.error("An error occurred. Please try again.");
+    } finally {
+      setBtnLoad(false);
+    }
   };
 
   return (
@@ -56,6 +51,7 @@ function SignUp() {
             />
             <Input
               label="E-mail:"
+              type="email"
               className="mb-3"
               {...register("email")}
               required

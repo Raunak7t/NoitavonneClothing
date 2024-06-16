@@ -6,7 +6,7 @@ import {
   selectProductDetails,
 } from "../features/products/productSlice";
 import { FaStar } from "react-icons/fa";
-import { Button } from "../components";
+import { Button, Loading } from "../components";
 
 function ProductDetails() {
   const { pid } = useParams();
@@ -18,7 +18,7 @@ function ProductDetails() {
   }, [dispatch, pid]);
 
   if (!productDetails) {
-    return <div>Loading...</div>;
+    return <Loading />;
   }
 
   const {
