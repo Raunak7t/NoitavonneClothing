@@ -50,7 +50,7 @@ function Checkout() {
           <Button
             className="w-full mt-24"
             onClick={() => {
-              toast.success("Order Placed");
+              toast.success("Order Placed!");
             }}
           >
             PLACE ORDER
