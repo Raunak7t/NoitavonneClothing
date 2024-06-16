@@ -8,7 +8,17 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
-import { Checkout, Home, LandingPage, Layout, ProductDetails } from "./pages/";
+import {
+  Checkout,
+  Home,
+  LandingPage,
+  Layout,
+  LogIn,
+  ProductDetails,
+  SignUp,
+} from "./pages/";
+import { Provider } from "react-redux";
+import { store } from "./store.js";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -20,7 +30,8 @@ const router = createBrowserRouter(
           <Route path=":pid" element={<ProductDetails />} />
         </Route>
         <Route path="checkout" element={<Checkout />} />
-        <Route path="" element={<Home />} />
+        <Route path="login" element={<LogIn />} />
+        <Route path="signup" element={<SignUp />} />
       </Route>
     </Route>
   )
@@ -28,6 +39,8 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>
 );

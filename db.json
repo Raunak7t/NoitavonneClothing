@@ -2,37 +2,218 @@
   "products": [
     {
       "id": 1,
-      "name": "T-Shirt",
-      "description": "Cotton T-Shirt",
+      "name": "Basic T-shirt",
+      "image": "https://example.com/basic-tshirt.jpg",
+      "description": "Simple cotton t-shirt",
       "price": 19.99,
-      "category": "Tops",
+      "category": "T-shirts",
       "size": "M",
-      "color": "Red",
-      "brand": "BrandA",
-      "popularity": 5
+      "color": "White",
+      "brand": "Nike",
+      "popularity": 4
     },
     {
       "id": 2,
-      "name": "Jeans",
-      "description": "Blue Denim Jeans",
+      "name": "Skinny Jeans",
+      "image": "https://example.com/skinny-jeans.jpg",
+      "description": "Stretch denim jeans",
       "price": 49.99,
-      "category": "Bottoms",
-      "size": "L",
+      "category": "Jeans",
+      "size": "30",
+      "color": "Black",
+      "brand": "Levi's",
+      "popularity": 5
+    },
+    {
+      "id": 3,
+      "name": "Summer Dress",
+      "image": "https://example.com/summer-dress.jpg",
+      "description": "Lightweight floral dress",
+      "price": 39.99,
+      "category": "Dresses",
+      "size": "S",
       "color": "Blue",
-      "brand": "BrandB",
+      "brand": "Zara",
       "popularity": 4
+    },
+    {
+      "id": 4,
+      "name": "Knit Sweater",
+      "image": "https://example.com/knit-sweater.jpg",
+      "description": "Cozy wool blend sweater",
+      "price": 59.99,
+      "category": "Sweaters",
+      "size": "L",
+      "color": "Red",
+      "brand": "H&M",
+      "popularity": 3
+    },
+    {
+      "id": 5,
+      "name": "Leather Jacket",
+      "image": "https://example.com/leather-jacket.jpg",
+      "description": "Classic biker jacket",
+      "price": 129.99,
+      "category": "Jackets",
+      "size": "XL",
+      "color": "Black",
+      "brand": "Adidas",
+      "popularity": 5
+    },
+    {
+      "id": 6,
+      "name": "Graphic T-shirt",
+      "image": "https://example.com/graphic-tshirt.jpg",
+      "description": "Printed cotton t-shirt",
+      "price": 24.99,
+      "category": "T-shirts",
+      "size": "L",
+      "color": "Green",
+      "brand": "Nike",
+      "popularity": 4
+    },
+    {
+      "id": 7,
+      "name": "Ripped Jeans",
+      "image": "https://example.com/ripped-jeans.jpg",
+      "description": "Distressed denim jeans",
+      "price": 59.99,
+      "category": "Jeans",
+      "size": "32",
+      "color": "Blue",
+      "brand": "Levi's",
+      "popularity": 5
+    },
+    {
+      "id": 8,
+      "name": "Evening Gown",
+      "image": "https://example.com/evening-gown.jpg",
+      "description": "Formal evening gown",
+      "price": 199.99,
+      "category": "Dresses",
+      "size": "M",
+      "color": "Red",
+      "brand": "Zara",
+      "popularity": 5
+    },
+    {
+      "id": 9,
+      "name": "Striped Sweater",
+      "image": "https://example.com/striped-sweater.jpg",
+      "description": "Striped wool sweater",
+      "price": 49.99,
+      "category": "Sweaters",
+      "size": "M",
+      "color": "White",
+      "brand": "H&M",
+      "popularity": 4
+    },
+    {
+      "id": 10,
+      "name": "Bomber Jacket",
+      "image": "https://example.com/bomber-jacket.jpg",
+      "description": "Casual bomber jacket",
+      "price": 79.99,
+      "category": "Jackets",
+      "size": "L",
+      "color": "Green",
+      "brand": "Adidas",
+      "popularity": 4
+    },
+    {
+      "id": 11,
+      "name": "V-neck T-shirt",
+      "image": "https://example.com/vneck-tshirt.jpg",
+      "description": "Cotton v-neck t-shirt",
+      "price": 22.99,
+      "category": "T-shirts",
+      "size": "S",
+      "color": "Black",
+      "brand": "Nike",
+      "popularity": 3
+    },
+    {
+      "id": 12,
+      "name": "Bootcut Jeans",
+      "image": "https://example.com/bootcut-jeans.jpg",
+      "description": "Bootcut denim jeans",
+      "price": 69.99,
+      "category": "Jeans",
+      "size": "31",
+      "color": "Blue",
+      "brand": "Levi's",
+      "popularity": 4
+    },
+    {
+      "id": 13,
+      "name": "Maxi Dress",
+      "image": "https://example.com/maxi-dress.jpg",
+      "description": "Long floral maxi dress",
+      "price": 79.99,
+      "category": "Dresses",
+      "size": "L",
+      "color": "Green",
+      "brand": "Zara",
+      "popularity": 4
+    },
+    {
+      "id": 14,
+      "name": "Crewneck Sweater",
+      "image": "https://example.com/crewneck-sweater.jpg",
+      "description": "Classic crewneck sweater",
+      "price": 39.99,
+      "category": "Sweaters",
+      "size": "XL",
+      "color": "Blue",
+      "brand": "H&M",
+      "popularity": 3
+    },
+    {
+      "id": 15,
+      "name": "Denim Jacket",
+      "image": "https://example.com/denim-jacket.jpg",
+      "description": "Traditional denim jacket",
+      "price": 89.99,
+      "category": "Jackets",
+      "size": "M",
+      "color": "Black",
+      "brand": "Adidas",
+      "popularity": 5
     }
   ],
   "categories": [
-    { "id": 1, "name": "Tops" },
-    { "id": 2, "name": "Bottoms" }
+    { "id": 1, "name": "T-shirts" },
+    { "id": 2, "name": "Jeans" },
+    { "id": 3, "name": "Dresses" },
+    { "id": 4, "name": "Sweaters" },
+    { "id": 5, "name": "Jackets" }
+  ],
+  "colors": [
+    { "id": 1, "name": "Black" },
+    { "id": 2, "name": "White" },
+    { "id": 3, "name": "Blue" },
+    { "id": 4, "name": "Red" },
+    { "id": 5, "name": "Green" }
+  ],
+  "brands": [
+    { "id": 1, "name": "Nike" },
+    { "id": 2, "name": "Adidas" },
+    { "id": 3, "name": "Zara" },
+    { "id": 4, "name": "H&M" },
+    { "id": 5, "name": "Levi's" }
   ],
   "users": [
     {
       "id": 1,
       "username": "user1",
-      "email": "user1@example.com",
-      "password": "password123"
+      "email": "user@1.com",
+      "password": "passme"
+    },
+    {
+      "id": 2,
+      "username": "user2",
+      "email": "user@2.com",
+      "password": "passme"
     }
   ]
 }
