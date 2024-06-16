@@ -31,7 +31,7 @@ function Header() {
   ];
 
   return (
-    <header className=" bg-slate-800/50 fixed top-0 left-0 right-0 backdrop-blur-md z-50">
+    <header className=" bg-slate-900/70 fixed top-0 left-0 right-0 backdrop-blur-md z-50">
       <Container
         className={`h-16 ${
           navOpen ? "sm:h-64" : "sm:h-28"

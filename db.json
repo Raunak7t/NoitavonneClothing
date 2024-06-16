@@ -271,12 +271,6 @@
       "username": "user2",
       "email": "user@2.com",
       "password": "passme"
-    },
-    {
-      "id": "821c",
-      "name": "Raunak",
-      "email": "raunak@gmail.com",
-      "password": "raunak"
     }
   ]
 }
