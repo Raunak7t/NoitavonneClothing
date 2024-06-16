@@ -8,9 +8,14 @@ import { RxCross2 } from "react-icons/rx";
 import SearchInput from "./SearchInput";
 import UserLogout from "./UserLogout";
 
+import { SearchBar } from "./SearchBar/SearchBar";
+import { SearchResultsList } from "./SearchBar/SearchResultsList";
+
 function Header() {
   const isLogin = useSelector((state) => state.isLogin);
   const userData = useSelector((state) => state.userData);
+
+  const [results, setResults] = useState([]);
 
   const [navOpen, setNavOpen] = useState(false);
 
@@ -47,7 +52,10 @@ function Header() {
             {navOpen ? <RxCross2 /> : <RiMenu4Fill />}
           </span>
         </div>
-        <SearchInput />
+        <SearchBar setResults={setResults} />
+        {results && results.length > 0 && (
+          <SearchResultsList results={results} />
+        )}
         <nav className={`sm:ml-auto sm:mt-4`}>
           {false ? (
             <UserLogout />

@@ -3,12 +3,15 @@ import axios from "axios";
 
 export const fetchProducts = createAsyncThunk(
   "products/fetchProducts",
-  async ({ category = "", page = 1, limit = 8 }) => {
-    const response = await axios.get(
-      `http://localhost:5000/products?${
-        category ? `category=${category}&` : ""
-      }_page=${page}&_per_page=${limit}`
-    );
+  async ({ category, page, sortBy, order, color, brand, size }) => {
+    let query = `?_page=${page}&_per_page=8`;
+    if (category && category !== "All") query += `&category=${category}`;
+    if (color && color !== "All") query += `&color=${color}`;
+    if (brand && brand !== "All") query += `&brand=${brand}`;
+    if (size && size !== "All") query += `&size=${size}`;
+    if (sortBy) query += `&_sort=${sortBy}&_order=${order}`;
+
+    const response = await axios.get(`http://localhost:5000/products${query}`);
     return response.data;
   }
 );

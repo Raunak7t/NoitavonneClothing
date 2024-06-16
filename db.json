@@ -182,6 +182,7 @@
     }
   ],
   "categories": [
+    { "id": 0, "name": "All" },
     { "id": 1, "name": "T-shirts" },
     { "id": 2, "name": "Jeans" },
     { "id": 3, "name": "Dresses" },
@@ -189,6 +190,7 @@
     { "id": 5, "name": "Jackets" }
   ],
   "colors": [
+    { "id": 0, "name": "All" },
     { "id": 1, "name": "Black" },
     { "id": 2, "name": "White" },
     { "id": 3, "name": "Blue" },
@@ -196,6 +198,7 @@
     { "id": 5, "name": "Green" }
   ],
   "brands": [
+    { "id": 0, "name": "All" },
     { "id": 1, "name": "Nike" },
     { "id": 2, "name": "Adidas" },
     { "id": 3, "name": "Zara" },
